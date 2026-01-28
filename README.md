@@ -3,11 +3,6 @@
 
 Automatically analyze, score, and rank candidate resumes against job descriptions using NLP and Machine Learning.
 
-## Deployed link
-```
-https://ai-resumeranker-dm.streamlit.app/
-```
-
 ## Usage
 
 1. Run the Streamlit application:
