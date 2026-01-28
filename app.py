@@ -38,7 +38,7 @@ try:
     processor = load_processor()
 except Exception as e:
     st.error(f"Failed to load processor: {e}")
-    st.info("Please ensure you have run 'python -m spacy download en_core_web_sm' and installed requirements.")
+    st.info("If on Streamlit Cloud, add the model URL to `requirements.txt`. Locally, run: `python -m spacy download en_core_web_sm`")
     st.stop()
 
 # Title and description
