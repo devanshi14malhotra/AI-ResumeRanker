@@ -32,15 +32,50 @@ st.markdown("""
 # Initialize processor
 @st.cache_resource
 def load_processor():
-    # Attempt to download model at runtime if missing
     try:
+        # Try loading as a package first (local dev)
         import spacy
-        if not spacy.util.is_package("en_core_web_sm"):
-            spacy.cli.download("en_core_web_sm")
-    except Exception as e:
-        print(f"Runtime download failed: {e}")
-    
-    return ResumeProcessor()
+        return ResumeProcessor()
+    except OSError:
+        # Fallback for Streamlit Cloud: Download and load from path
+        import spacy
+        import subprocess
+        import sys
+        from pathlib import Path
+        import urllib.request
+        import tarfile
+        
+        # Define model version and path
+        MODEL_VERSION = "3.7.0"
+        MODEL_NAME = "en_core_web_sm"
+        MODEL_TAR = f"{MODEL_NAME}-{MODEL_VERSION}.tar.gz"
+        MODEL_URL = f"https://github.com/explosion/spacy-models/releases/download/{MODEL_NAME}-{MODEL_VERSION}/{MODEL_TAR}"
+        
+        if not Path(MODEL_NAME).exists():
+             print(f"Downloading {MODEL_NAME}...")
+             urllib.request.urlretrieve(MODEL_URL, MODEL_TAR)
+             print("Extracting model...")
+             with tarfile.open(MODEL_TAR, "r:gz") as tar:
+                 tar.extractall()
+        
+        # Load from the extracted path
+        # Structure is usually en_core_web_sm-3.7.0/en_core_web_sm/en_core_web_sm-3.7.0
+        model_path = path = f"{MODEL_NAME}-{MODEL_VERSION}/{MODEL_NAME}/{MODEL_NAME}-{MODEL_VERSION}"
+        
+        # Patch ResumeProcessor to accept a loaded nlp object or path
+        # But ResumeProcessor loads it internally. We must modify ResumeProcessor or monkeypatch.
+        # Easier: Modify ResumeProcessor to accept 'nlp' arg? No, let's just install it to local user?
+        
+        # Alternative: We can load it here and pass it to ResumeProcessor if we modify it.
+        # But strict restriction: do not modify resume_processor.py unless necessary.
+        
+        # Best Hack: Add the extracted model to sys.path so 'import en_core_web_sm' works?
+        # The extracted folder contains the package.
+        package_path = f"{MODEL_NAME}-{MODEL_VERSION}"
+        if package_path not in sys.path:
+            sys.path.append(package_path)
+            
+        return ResumeProcessor()
 
 try:
     processor = load_processor()
