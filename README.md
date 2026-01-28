@@ -1,11 +1,11 @@
 # AI-Powered Resume Screening System
+[![Streamlit Live App](https://img.shields.io/badge/Streamlit-Live%20App-5314C4?logo=streamlit)](https://ai-resumeranker-dm.streamlit.app/)
 
 Automatically analyze, score, and rank candidate resumes against job descriptions using NLP and Machine Learning.
 
 ## Deployed link
-
 ```
-
+https://ai-resumeranker-dm.streamlit.app/
 ```
 
 ## Usage
@@ -14,8 +14,7 @@ Automatically analyze, score, and rank candidate resumes against job description
    ```bash
    streamlit run app.py
    ```
-
-2. The application will open in your default web browser (usually http://localhost:8501).
+2. The application will open in your default web browser.
 
 3. **In the App:**
    - **Step 1:** Paste a job description or upload a JD file (TXT/DOCX).
