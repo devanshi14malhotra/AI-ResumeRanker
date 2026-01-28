@@ -32,6 +32,14 @@ st.markdown("""
 # Initialize processor
 @st.cache_resource
 def load_processor():
+    # Attempt to download model at runtime if missing
+    try:
+        import spacy
+        if not spacy.util.is_package("en_core_web_sm"):
+            spacy.cli.download("en_core_web_sm")
+    except Exception as e:
+        print(f"Runtime download failed: {e}")
+    
     return ResumeProcessor()
 
 try:
