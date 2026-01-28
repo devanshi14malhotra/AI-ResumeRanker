@@ -1,0 +1,53 @@
+{
+  "programming_languages": [
+    "Python", "Java", "JavaScript", "TypeScript", "C", "C++", "C#", "Go", "Rust",
+    "Ruby", "PHP", "Swift", "Kotlin", "Scala", "R", "Perl", "Dart", "Objective-C",
+    "SQL", "HTML", "CSS", "Shell", "Bash", "PowerShell"
+  ],
+  "frameworks": [
+    "React", "Angular", "Vue", "Svelte", "Next.js", "Nuxt.js", "Django", "Flask",
+    "FastAPI", "Spring", "Spring Boot", "Node.js", "Express", "NestJS", ".NET",
+    "ASP.NET", "Laravel", "Ruby on Rails", "jQuery", "Bootstrap", "Tailwind",
+    "Material-UI", "Ant Design", "Redux", "MobX", "GraphQL", "REST", "gRPC"
+  ],
+  "databases": [
+    "MySQL", "PostgreSQL", "MongoDB", "Redis", "Cassandra", "Oracle", "SQL Server",
+    "SQLite", "MariaDB", "DynamoDB", "Elasticsearch", "Neo4j", "CouchDB",
+    "Firebase", "Supabase", "Prisma", "Sequelize", "TypeORM"
+  ],
+  "cloud_platforms": [
+    "AWS", "Azure", "GCP", "Google Cloud", "Heroku", "DigitalOcean", "Linode",
+    "Vercel", "Netlify", "Cloudflare", "IBM Cloud", "Oracle Cloud"
+  ],
+  "devops_tools": [
+    "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions", "CircleCI",
+    "Travis CI", "Terraform", "Ansible", "Puppet", "Chef", "Vagrant", "Prometheus",
+    "Grafana", "ELK Stack", "Datadog", "New Relic", "Nginx", "Apache"
+  ],
+  "version_control": [
+    "Git", "GitHub", "GitLab", "Bitbucket", "SVN", "Mercurial"
+  ],
+  "ml_ai_tools": [
+    "TensorFlow", "PyTorch", "Keras", "Scikit-learn", "Pandas", "NumPy", "Matplotlib",
+    "Seaborn", "Jupyter", "OpenCV", "NLTK", "SpaCy", "Hugging Face", "LangChain",
+    "OpenAI", "Anthropic", "LLM", "GPT", "BERT", "Transformer"
+  ],
+  "testing": [
+    "Jest", "Mocha", "Chai", "Pytest", "JUnit", "Selenium", "Cypress", "Playwright",
+    "Postman", "TestNG", "Karma", "Jasmine"
+  ],
+  "soft_skills": [
+    "Leadership", "Communication", "Teamwork", "Problem Solving", "Critical Thinking",
+    "Time Management", "Adaptability", "Creativity", "Collaboration", "Analytical",
+    "Project Management", "Agile", "Scrum", "Kanban", "Mentoring", "Public Speaking"
+  ],
+  "methodologies": [
+    "Agile", "Scrum", "Kanban", "Waterfall", "DevOps", "CI/CD", "TDD", "BDD",
+    "Microservices", "Serverless", "Event-Driven", "REST API", "SOAP"
+  ],
+  "other_tools": [
+    "Jira", "Confluence", "Slack", "Trello", "Asana", "Notion", "Figma", "Sketch",
+    "Adobe XD", "Photoshop", "Illustrator", "VS Code", "IntelliJ", "Eclipse",
+    "Vim", "Emacs", "Tableau", "Power BI", "Excel", "Google Analytics"
+  ]
+}
